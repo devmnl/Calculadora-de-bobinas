@@ -1,0 +1,113 @@
+/* styles.css */
+
+/* Estilos para o corpo da página */
+body {
+    margin : 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:#045bfc ;
+  }
+
+
+
+  .menu {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: left;
+    padding: 2px;
+    position: fixed; /* Adiciona a propriedade position fixed */
+    top: 0; /* Coloca o menu no topo da janela do navegador */
+    left: 0; /* Coloca o menu alinhado à esquerda */
+    width: 100%; /* Define a largura do menu para ocupar toda a largura da janela */
+  }
+  
+  /* Estilos para os links do menu */
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #141414;
+    font-size: 16px;
+  }
+  
+  .menu a:hover {
+    color: #66ccff;
+  }
+
+
+  
+  
+  
+  /* Estilos para a div que envolve o conteúdo */
+  .container {
+    max-width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 4);
+    border-radius: 20px;
+  }
+  
+  /* Estilos para os elementos do formulário */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  label, input, select, button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #resultado {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+/* Estilo para o rodapé */
+footer {
+    background-color:#313846 ;
+    padding: 10px;
+    text-align: center;
+    color: #e9e1e1;
+    position: fixed; /* Fixa o rodapé na parte inferior da janela */
+    bottom: 0; /* Cola o rodapé no rodapé da janela */
+    left: 0;
+    right: 0;
+  }
+  
+  /* Estilize o parágrafo dentro do rodapé, se necessário */
+  footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+
+
+  
+  
