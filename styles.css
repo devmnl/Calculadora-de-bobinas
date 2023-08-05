@@ -64,6 +64,7 @@ body {
     width: 100%; /* Define a largura do menu para ocupar toda a largura da janela */
     display: flex;
     text-align: center;
+    border-radius: 35px;
   
   }
 
