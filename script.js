@@ -146,42 +146,7 @@ function calcularResultado() {
     document.getElementById('resultadoDiametro').innerText = resultado;
   }
 
-//------------------//
 
-let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', (e) => {
-  // Prevenir a exibição automática da solicitação de instalação
-  e.preventDefault();
-  
-  // Armazenar o evento para usá-lo posteriormente
-  deferredPrompt = e;
-  
-  // Mostrar a imagem que permite ao usuário iniciar a instalação manualmente
-  const installButton = document.getElementById('install-button');
-  installButton.style.display = 'block';
-  
-  // Lidar com o clique na imagem de instalação
-  installButton.addEventListener('click', () => {
-    // Mostrar a solicitação de instalação manualmente
-    deferredPrompt.prompt();
-    
-    // Esperar pelo resultado da solicitação
-    deferredPrompt.userChoice.then((choiceResult) => {
-      if (choiceResult.outcome === 'accepted') {
-        console.log('Usuário aceitou a instalação');
-      } else {
-        console.log('Usuário rejeitou a instalação');
-      }
-      
-      // Limpar o evento
-      deferredPrompt = null;
-    });
-    
-    // Esconder a imagem de instalação
-    installButton.style.display = 'none';
-  });
-});
 
 
   
