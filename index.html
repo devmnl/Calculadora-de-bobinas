@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Peso de Bobinas</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="menu"> 
+
+    <div class="logo-toder"
+        <a href="http://toder.ind.br/" aria-current="page" class="navbrand w-nav-brand w--current">
+        <img src="images/toder.png" width="100" alt="Toder">
+        </a>
+    </div>
+        <div class="menu-centralizado">
+            <ul class="menu-items">
+                <li><a href="#container">Cálculos</a></li>
+                <li><a href="#" onclick="exibirImagemSentidos()">Sentidos</a></li>
+            </ul>
+        </div>
+    
+    </nav>
+
+    <div class="content">
+        <div class="calculadoraDiametro">
+           <h1>Calculadora de diâmetro</h1>
+               <label for="diametro">Digite o diâmetro desejado em "mm":</label>
+                  <input type="number" id="diametro" min="220" max="400">
+                     <button onclick="calcularResultado()">Calcular diâmetro</button>
+               <label for="resultado">Raio externo em "cm":</label>
+                <span id="resultadoDiametro"></span>
+        </div>
+        <div class="calculadoraMetragem">
+           <h1>Calculadora de metragem</h1>
+           <label for="tipoBobina">Selecione o tipo de bobina:</label>
+           <select id="tipoBobina">
+               <option value="bopp20">BOPP 20 micras</option>
+               <option value="bopp17">BOPP 17 micras</option>
+               <option value="pet12">PET 12 micras</option>
+           </select>
+              <label for="largura">Digite a largura da bobina (em milímetros):</label>
+              <input type="number" id="largura" step="any">
+              <label for="pesoDesejado">Digite o peso desejado (em kg):</label>
+              <input type="number" id="pesoDesejado" step="any">
+              <button onclick="calcularMetragem()">Calcular Metragem</button>
+              <p id="resultadoMetragem"></p>
+   </div>
+
+  <div id="imagemSentidos">
+    <button onclick="fecharImagemSentidos()">Voltar</button>
+    <img src="images/sentidos.jpg" alt="Imagem dos Sentidos">
+</div>
+
+  <footer>
+    <a href="https://www.linkedin.com/in/manoel-franco-fernandes-neto-6260a0281/">
+        <img src="images/linkedin.png" alt="linkedin">
+    </a>
+        <a href="https://api.whatsapp.com/send?phone=5511932590460&text=Ol%C3%A1,%20em%20que%20posso%20te%20ajudar%20?">
+            <img src="images/whats.png"  alt="whatsapp">
+        </a>
+    <p>Manoel Franco Fernandes Neto<br>
+        Todos os direitos reservados © 2023</p>
+    </a>
+</footer>
+
+
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(registration => {
+          console.log('Service Worker registrado com sucesso:', registration);
+        })
+        .catch(error => {
+          console.log('Falha ao registrar o Service Worker:', error);
+        });
+    }
+  </script>
+</body>
+</html>

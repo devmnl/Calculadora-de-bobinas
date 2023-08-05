@@ -1,0 +1,263 @@
+/* styles.css */
+
+/* Estilos para o corpo da página */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:#045bfc ;
+}
+
+.content {
+    display: flex; /* Usa flexbox para organizar os elementos horizontalmente */
+    justify-content: space-between; /* Espaço entre as duas divs */
+    max-width: 800px; /* Ajuste conforme necessário */
+
+    /* Adiciona media query para dispositivos móveis */
+    @media (max-width: 768px) {
+        flex-direction: column; /* Altera para coluna em dispositivos móveis */
+        align-items: center; /* Centraliza os itens na coluna */
+    }
+
+}
+
+.calculadoraDiametro {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 4);
+    border-radius: 20px;
+    margin-right: 10px;
+
+    /* Adiciona margem inferior para separar as divs em dispositivos móveis */
+    @media (max-width: 768px) {
+        margin-right: 0;
+        margin-bottom: 10px;
+        margin-top: 300px;
+    }
+
+}
+
+/* Estilos para os resultados */
+#resultadoDiametro,
+#resultadoMetragem {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 19px;
+  color: #333;
+  border: 2px solid #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+  
+
+
+  .menu {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 2px;
+    position: fixed; /* Adiciona a propriedade position fixed */
+    top: 0; /* Coloca o menu no topo da janela do navegador */
+    left: 0; /* Coloca o menu alinhado à esquerda */
+    width: 100%; /* Define a largura do menu para ocupar toda a largura da janela */
+    display: flex;
+    text-align: center;
+  
+  }
+
+
+
+  .menu-centralizado {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+
+.menu-items {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+.menu-items li {
+  margin-right: 50px; /* Espaçamento entre os itens do menu */
+}
+
+  /* Estilos para o cabeçalho e ícones */
+
+
+.icones {
+  display: flex;
+  align-items: center;
+}
+
+  
+  /* Estilos para os links do menu */
+
+  nav {
+    background-color: #f0f0f0;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline-block;
+    margin-right: 50px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    color: #007BFF;
+  }
+
+  .logo-toder {
+      display: block;
+      margin-left: 5px;
+      padding-right: 20px;
+  }
+  
+
+  
+  
+  
+  /* Estilos para a div que envolve o conteúdo */
+  .calculadoraMetragem {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 4);
+    border-radius: 20px;
+    margin-left: 10px;
+
+        /* Adiciona margem esquerda para separar as divs em dispositivos móveis */
+        @media (max-width: 768px) {
+            margin-left: 0;
+            margin-top: 10px;
+            margin-bottom: 150px;
+        }
+
+
+}
+  
+  /* Estilos para os elementos do formulário */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  label, input, select, button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #resultado {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+/* Estilo para o rodapé */
+footer {
+    background-color:#313846 ;
+    padding: 10px;
+    text-align: center;
+    color: #e9e1e1;
+    position: fixed; /* Fixa o rodapé na parte inferior da janela */
+    bottom: 0; /* Cola o rodapé no rodapé da janela */
+    left: 0;
+    right: 0;
+  }
+  
+  /* Estilize o parágrafo dentro do rodapé, se necessário */
+  footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+#imagemSentidos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente para sobrepor a página */
+    display: none; /* Oculta a div inicialmente */
+    z-index: 9999; /* Valor alto para garantir que fique sobre os outros elementos */
+}
+
+#imagemSentidos img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+/* Estilize o botão "Voltar" */
+#imagemSentidos button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+  
+  
