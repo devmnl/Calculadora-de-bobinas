@@ -157,12 +157,11 @@ window.addEventListener('beforeinstallprompt', (e) => {
   // Armazenar o evento para usá-lo posteriormente
   deferredPrompt = e;
   
-  // Mostrar um botão ou elemento no DOM que permita ao usuário iniciar a instalação manualmente
-  // Exemplo: mostrar um botão "Instalar" na página
+  // Mostrar a imagem que permite ao usuário iniciar a instalação manualmente
   const installButton = document.getElementById('install-button');
   installButton.style.display = 'block';
   
-  // Lidar com o clique no botão de instalação
+  // Lidar com o clique na imagem de instalação
   installButton.addEventListener('click', () => {
     // Mostrar a solicitação de instalação manualmente
     deferredPrompt.prompt();
@@ -179,9 +178,10 @@ window.addEventListener('beforeinstallprompt', (e) => {
       deferredPrompt = null;
     });
     
-    // Esconder o botão de instalação
+    // Esconder a imagem de instalação
     installButton.style.display = 'none';
   });
 });
+
 
   
