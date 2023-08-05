@@ -145,5 +145,43 @@ function calcularResultado() {
   
     document.getElementById('resultadoDiametro').innerText = resultado;
   }
+
+//------------------//
+
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevenir a exibição automática da solicitação de instalação
+  e.preventDefault();
   
+  // Armazenar o evento para usá-lo posteriormente
+  deferredPrompt = e;
+  
+  // Mostrar um botão ou elemento no DOM que permita ao usuário iniciar a instalação manualmente
+  // Exemplo: mostrar um botão "Instalar" na página
+  const installButton = document.getElementById('install-button');
+  installButton.style.display = 'block';
+  
+  // Lidar com o clique no botão de instalação
+  installButton.addEventListener('click', () => {
+    // Mostrar a solicitação de instalação manualmente
+    deferredPrompt.prompt();
+    
+    // Esperar pelo resultado da solicitação
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('Usuário aceitou a instalação');
+      } else {
+        console.log('Usuário rejeitou a instalação');
+      }
+      
+      // Limpar o evento
+      deferredPrompt = null;
+    });
+    
+    // Esconder o botão de instalação
+    installButton.style.display = 'none';
+  });
+});
+
   
