@@ -59,7 +59,7 @@ body {
     color: #000000;
     padding: 2px;
     position: fixed; /* Adiciona a propriedade position fixed */
-    top: 0; /* Coloca o menu no topo da janela do navegador */
+    top: 8px; /* Coloca o menu no topo da janela do navegador */
     left: 0; /* Coloca o menu alinhado à esquerda */
     width: 100%; /* Define a largura do menu para ocupar toda a largura da janela */
     display: flex;
